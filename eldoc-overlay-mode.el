@@ -16,6 +16,11 @@
 
 (defvar eldoc-overlay-display-overlay nil)
 
+(defface eldoc-overlay-face
+  '((nil (:background "light gray" :box '(:color "gray" :line-width 1))))
+  "Face for eldoc-overlay-mode."
+  :group 'eldoc)
+
 (defun eldoc-overlay-delete-string-display ()
   (when (overlayp eldoc-overlay-display-overlay)
     (delete-overlay eldoc-overlay-display-overlay))
@@ -34,6 +39,8 @@
           (end-of-line)
           (setq end-pos (point))
           (setq eldoc-overlay-display-overlay (make-overlay start-pos end-pos))
+          ;; Change the face
+          (overlay-put eldoc-overlay-display-overlay 'face 'eldoc-overlay-face)
           ;; Hide full line
           (overlay-put eldoc-overlay-display-overlay 'display "")
           ;; Display message
