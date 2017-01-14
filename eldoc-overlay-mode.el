@@ -1,5 +1,12 @@
 ;;; eldoc-overlay-mode.el --- Display eldoc with contextual documentation overlay.
 
+;; Author: stardiviner <numbchild@gmail.com>
+;; Keywords: eldoc overlay
+;; URL: https://github.com/stardiviner/eldoc-overlay
+;; Created: 14th Jan 2017
+;; Version: 0.0.1
+;; Package-Requires: ((emacs "24.3"))
+
 ;;; Commentary:
 
 
