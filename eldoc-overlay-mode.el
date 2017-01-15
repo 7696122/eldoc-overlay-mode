@@ -17,7 +17,7 @@
 (defvar eldoc-overlay-display-overlay nil)
 
 (defface eldoc-overlay-face
-  '((nil (:background "light gray" :box '(:color "gray" :line-width 1))))
+  '((t (:inherit italic)))
   "Face for eldoc-overlay-mode."
   :group 'eldoc)
 
