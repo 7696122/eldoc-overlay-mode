@@ -2,7 +2,7 @@
 
 ;; Author: stardiviner <numbchild@gmail.com>
 ;; Keywords: eldoc overlay
-;; URL: https://github.com/stardiviner/eldoc-overlay
+;; URL: https://github.com/stardiviner/eldoc-overlay-mode
 ;; Created: 14th Jan 2017
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4"))
