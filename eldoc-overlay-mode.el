@@ -61,7 +61,7 @@
 (define-minor-mode eldoc-overlay-mode
   "Minor mode for displaying eldoc with contextual documentation overlay."
   t
-  :lighter "ElDoc overlay"
+  :lighter " ElDoc overlay"
   :keymap eldoc-overlay-mode-map
   :global t
   (if eldoc-overlay-mode
