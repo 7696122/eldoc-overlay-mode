@@ -57,6 +57,7 @@
   (let ((map (make-sparse-keymap)))
     map))
 
+;;;###autoload
 (define-minor-mode eldoc-overlay-mode
   "Minor mode for displaying eldoc with contextual documentation overlay."
   t
