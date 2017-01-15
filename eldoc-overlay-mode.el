@@ -5,7 +5,7 @@
 ;; URL: https://github.com/stardiviner/eldoc-overlay
 ;; Created: 14th Jan 2017
 ;; Version: 0.0.1
-;; Package-Requires: ((emacs "24.3"))
+;; Package-Requires: ((emacs "24.4"))
 
 ;;; Commentary:
 
