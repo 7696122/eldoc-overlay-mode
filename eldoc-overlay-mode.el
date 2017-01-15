@@ -60,7 +60,7 @@
 ;;;###autoload
 (define-minor-mode eldoc-overlay-mode
   "Minor mode for displaying eldoc with contextual documentation overlay."
-  t
+  :init-value t
   :lighter " ElDoc overlay"
   :keymap eldoc-overlay-mode-map
   :global t
