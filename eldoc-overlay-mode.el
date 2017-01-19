@@ -31,7 +31,8 @@
   "Overwrite contents of next line with STRING until next command."
   (let* ((indent-spaces (make-string (- (current-indentation) 2) ?\s))
          (str (concat (propertize "➜ " 'face 'font-lock-doc-face)
-                      (copy-sequence string)))
+                      (copy-sequence string) ; original eldoc string with format
+                      "\n"))
          start-pos end-pos)
     (unwind-protect
         (save-excursion
@@ -47,6 +48,8 @@
           (overlay-put eldoc-overlay--overlay 'display "")
           (overlay-put eldoc-overlay--overlay 'line-prefix (make-string
                                                             (current-indentation) ?\s))
+          ;; pre-pend indentation spaces
+          (overlay-put eldoc-overlay--overlay 'line-prefix indent-spaces)
           ;; auto delete overlay with property 'evaporate
           (overlay-put eldoc-overlay--overlay 'evaporate t)
           ;; Display message
