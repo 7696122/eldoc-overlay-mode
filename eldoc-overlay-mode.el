@@ -45,9 +45,8 @@
           ;; Change the face
           (overlay-put eldoc-overlay--overlay 'face 'eldoc-overlay-face)
           ;; Hide full line
-          (overlay-put eldoc-overlay--overlay 'display "")
-          (overlay-put eldoc-overlay--overlay 'line-prefix (make-string
-                                                            (current-indentation) ?\s))
+          ;; (overlay-put eldoc-overlay--overlay 'display "")
+          ;; (overlay-put eldoc-overlay--overlay 'display :height 120)
           ;; pre-pend indentation spaces
           (overlay-put eldoc-overlay--overlay 'line-prefix indent-spaces)
           ;; auto delete overlay with property 'evaporate
