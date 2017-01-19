@@ -45,6 +45,8 @@
           (overlay-put eldoc-overlay--overlay 'display "")
           (overlay-put eldoc-overlay--overlay 'line-prefix (make-string
                                                             (current-indentation) ?\s))
+          ;; auto delete overlay with property 'evaporate
+          (overlay-put eldoc-overlay--overlay 'evaporate t)
           ;; Display message
           (overlay-put eldoc-overlay--overlay 'before-string str))
       (add-hook 'post-command-hook 'eldoc-overlay--clear-overlay))))
