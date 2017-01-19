@@ -30,10 +30,16 @@
 (defun eldoc-overlay--string-display-next-line (string)
   "Overwrite contents of next line with STRING until next command."
   (let* ((indent-spaces (make-string (- (current-indentation) 1) ?\s))
-         (str (concat indent-spaces
+         (border-line (make-string (window-body-width) ?―))
+         (str (concat (propertize border-line 'face 'font-lock-doc-face)
+                      "\n"
+                      indent-spaces
                       (propertize "➜ " 'face 'font-lock-doc-face)
                       (copy-sequence string) ; original eldoc string with format
-                      "\n"))
+                      "\n"
+                      (propertize border-line 'face 'font-lock-doc-face)
+                      "\n"
+                      ))
          start-pos end-pos)
     (unwind-protect
         (save-excursion
