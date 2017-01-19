@@ -43,7 +43,7 @@
           (setq end-pos (point))
           (setq eldoc-overlay--overlay (make-overlay start-pos end-pos (current-buffer)))
           ;; Change the face
-          (overlay-put eldoc-overlay--overlay 'face 'eldoc-overlay-face)
+          ;; (overlay-put eldoc-overlay--overlay 'face 'eldoc-overlay-face)
           ;; Hide full line
           ;; (overlay-put eldoc-overlay--overlay 'display "")
           ;; (overlay-put eldoc-overlay--overlay 'display :height 120)
