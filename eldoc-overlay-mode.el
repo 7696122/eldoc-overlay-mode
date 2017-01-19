@@ -48,7 +48,7 @@
           ;; (overlay-put eldoc-overlay--overlay 'display "")
           ;; (overlay-put eldoc-overlay--overlay 'display :height 120)
           ;; pre-pend indentation spaces
-          (overlay-put eldoc-overlay--overlay 'line-prefix indent-spaces)
+          ;; (overlay-put eldoc-overlay--overlay 'line-prefix indent-spaces)
           ;; auto delete overlay with property 'evaporate
           (overlay-put eldoc-overlay--overlay 'evaporate t)
           ;; Display message
