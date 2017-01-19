@@ -29,8 +29,7 @@
 
 (defun eldoc-overlay--string-display-next-line (string)
   "Overwrite contents of next line with STRING until next command."
-  (let ((str (concat (make-string (1+ (current-indentation)) 32)
-                     (copy-sequence string)))
+  (let ((str (copy-sequence string))
         start-pos end-pos)
     (unwind-protect
         (save-excursion
@@ -44,6 +43,8 @@
           (overlay-put eldoc-overlay--overlay 'face 'eldoc-overlay-face)
           ;; Hide full line
           (overlay-put eldoc-overlay--overlay 'display "")
+          (overlay-put eldoc-overlay--overlay 'line-prefix (make-string
+                                                            (current-indentation) ?\s))
           ;; Display message
           (overlay-put eldoc-overlay--overlay 'before-string str))
       (add-hook 'post-command-hook 'eldoc-overlay--clear-overlay))))
